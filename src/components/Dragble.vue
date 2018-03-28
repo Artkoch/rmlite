@@ -32,9 +32,9 @@ export default {
   },
   methods: {
     mousedown(e) {
+      this.mouse.down = true
       this.cursorPositionInRect.y = this.$el.getBoundingClientRect().y - e.pageY
       this.cursorPositionInRect.x = this.$el.getBoundingClientRect().x - e.pageX
-      this.mouse.down = true
       window.addEventListener('mousemove',this.move)
     },
     mouseup() {

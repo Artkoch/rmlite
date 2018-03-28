@@ -1,21 +1,31 @@
 <template>
   <div class="workspace">
-    Выбрать видео:  <UploadVideo/>
+    Выбрать видео:  <AddVideo @videoAdded="handleVideoAdd"/>
+    <Video v-if="!!videoUrl" :videoUrl="videoUrl" ></Video>
   </div>
 </template>
 
 <script>
-import UploadVideo from '../components/UploadVideo'
+  import AddVideo from '../components/AddVideo'
+  import Video from '../components/Video'
 
-export default {
-  name: 'Workspace',
-  data () {
-    return {}
-  },
-  components: {
-    UploadVideo
+  export default {
+    name: 'Workspace',
+    data () {
+      return {
+        videoUrl: ''
+      }
+    },
+    methods: {
+      handleVideoAdd(videoUrl) {
+        this.videoUrl = videoUrl
+      }
+    },
+    components: {
+      AddVideo,
+      Video,
+    }
   }
-}
 </script>
 
 <style scoped>

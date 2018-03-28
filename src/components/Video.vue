@@ -1,7 +1,5 @@
 <template>
   <iframe
-    width="560"
-    height="315"
     :src="videoUrl"
     frameborder="0"
     allow="autoplay; encrypted-media"
@@ -10,6 +8,9 @@
   </iframe>
 </template>
 
+<!--
+https://www.youtube.com/embed/6_ZiQ4_rqZY
+-->
 <script>
 export default {
   props: ['videoUrl'],
@@ -18,9 +19,6 @@ export default {
   }
 }
 </script>
-<!--
-https://www.youtube.com/embed/6_ZiQ4_rqZY
--->
 
 <style>
 .video-container {
