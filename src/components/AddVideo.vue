@@ -38,10 +38,6 @@ export default {
 </script>
 
 <style>
-.add-video-wrapper {
-
-}
-
 .add-video-btn {
   border: 2px solid orange;
   cursor: pointer;
@@ -49,7 +45,6 @@ export default {
   border-radius: 20px;
 
   padding: 7px 10px;
-
 }
 
 .add-video-btn:hover {
@@ -60,7 +55,8 @@ export default {
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-enter, .fade-leave-to {
   opacity: 0;
 }
 </style>

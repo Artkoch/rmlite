@@ -1,7 +1,9 @@
 <template>
-  <div class="workspace">
+  <div class="wrapper">
     Выбрать видео:  <AddVideo @videoAdded="handleVideoAdd"/>
     <Video v-if="!!videoUrl" :videoUrl="videoUrl" ></Video>
+    <div class="workspace">
+    </div>
   </div>
 </template>
 
