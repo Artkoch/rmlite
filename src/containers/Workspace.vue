@@ -1,29 +1,33 @@
 <template>
   <div class="workspace">
-    Выбрать видео:  <UploadVideo/>
+    <Toolbar>
+      <AddVideo/>
+    </Toolbar>
+    <DragResize v-if="this.videoUrl" >
+      <Video :videoUrl="this.videoUrl" />
+    </DragResize>
   </div>
 </template>
 
 <script>
-import UploadVideo from '../components/UploadVideo'
+import AddVideo from '../components/AddVideo'
+import Video from '../components/Video'
+import DragResize from '../containers/DragResize'
+import Toolbar from '../containers/Toolbar'
 
 export default {
   name: 'Workspace',
-  data () {
-    return {}
+  computed: {
+    videoUrl () {
+      console.log(this.$store.state.videoUrl);
+      return this.$store.state.videoUrl
+    }
   },
   components: {
-    UploadVideo
+    AddVideo,
+    Video,
+    DragResize,
+    Toolbar
   }
 }
 </script>
-
-<style scoped>
-
-.workspace {
-  border: 1px dashed #c1c1c1;
-  height: 100vh;
-  width: 100%;
-}
-
-</style>
