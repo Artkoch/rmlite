@@ -1,7 +1,7 @@
 <template>
   <iframe
-    width="560"
-    height="315"
+    width="100%"
+    height="100%"
     :src="videoUrl"
     frameborder="0"
     allow="autoplay; encrypted-media"

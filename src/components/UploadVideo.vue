@@ -6,15 +6,15 @@
       v-model="videoUrl"
     />
     <button @click="handleClick">Past URL</button>
-    <DragContainer>
+    <DragResizeContainer>
         <VideoContainer v-if="!videoUrl == ''" :videoUrl="videoUrl"></VideoContainer>
-    </DragContainer>
+    </DragResizeContainer>
   </label>
 </template>
 
 <script>
 import VideoContainer from "./VideoContainer"
-import DragContainer from "./DragContainer"
+import DragResizeContainer from "./DragResizeContainer"
 
 
 export default {
@@ -30,7 +30,7 @@ export default {
   },
   components: {
     VideoContainer,
-    DragContainer,
+    DragResizeContainer,
 
   }
 }
